@@ -2,21 +2,21 @@
 
 A Software product and services company decided to invest in developing a Sales Force Automation solution that can be offered as an application to different corporate customers. The registration of corporate customers will be done via a separate system and it is not part of the scope of this project. The high level requirements of the Sales Force Automation solution are given below:
 
-Model Layer Features
+# Model Layer Features
 
 The application should have the following Business Objects -
 
-Opportunity
+# # Opportunity
 The Opportunity Business object should contain the attributes (fields) – Name , Win Percentage , Account , Primary Contact , Close Date , Estimated Revenue , Risk Level (High/Medium/Low)
 
-Contact
+# # Contact
 The Contact Business Object should contain the attributes (fields) – Name , Account , Address , Title , Work Phone , Mobile Phone , Email
 
-Relationships
+# # Relationships
 
 There should also be an M:M relationship between Opportunity and Contact business object , where an Opportunity can be associated with multiple Contacts and a Contact can be involved in multiple Opportunities .
 
-UI Features
+# UI Features
 
 A user of the application should be able to perform the following actions -
 

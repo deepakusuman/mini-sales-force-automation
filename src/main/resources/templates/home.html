@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/js/um27xtxn.js}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="header">
+		<header>
+			<h1>
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<div class="centerField" align="center">
+
+		<p class="intro">A Software product and services company decided
+			to invest in developing a Sales Force Automation solution that can be
+			offered as an application to different corporate customers. The
+			registration of corporate customers will be done via a separate
+			system and it is not part of the scope of this project.</p>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div align="center">
+
+		<a th:href="@{Opportunities}"> Opportunities </a> | <a
+			th:href="@{Contacts}"> Contacts </a>
+			<br> <br><br>
+			 <a
+			th:href="@{searchOpportunity}"> Search Opportunity </a> | <a
+			th:href="@{createOpportunity}"> Create Opportunity </a> | <a
+			th:href="@{createContact}"> Create Contact </a> | <a
+			th:href="@{filterSearchContacts}"> Search Contact </a>
+	</div>
+</body>
+
+</html>

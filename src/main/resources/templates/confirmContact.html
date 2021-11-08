@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script type="text/javascript">
+	function validateForm() {
+		console.log(7);
+
+		return false;
+	}
+</script>
+<body>
+
+	<div class="header">
+	<div align="right"> <a th:href="@{home}"> Home </a> </div>
+		<div align="left">
+		<i class="fa fa-arrow-circle-left" style="font-size: 36px"
+			onclick="history.go(-1)"></i>
+	</div>
+	
+		<header>
+			<h1 align="center">
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<h3 align="center">Contact Added</h3>
+	<div align="center">
+
+		<strong><span>Name : </span></strong> <span
+			th:text="${contact.name}"></span> <br>
+		<br> <strong><span>Title : </span></strong> <span
+			th:text="${contact.title}"></span> <br>
+		<br> <strong><span>Account : </span></strong> <span
+			th:text="${contact.account}"></span> <br>
+		<br> <strong><span>Address : </span></strong> <span
+			th:text="${contact.address}"></span> <br>
+		<br> <strong><span>Work Phone : </span></strong> <span
+			th:text="${contact.workPhone}"></span> <br>
+		<br> <strong><span>Mobile Phone : </span></strong> <span
+			th:text="${contact.mobilePhone}"></span> <br>
+		<br> <strong><span>E-mail : </span></strong> <span
+			th:text="${contact.email}"></span> <br>
+		<br>
+		<br>
+		<br> <a th:href="@{createContact}"> Add New Contact </a>
+	</div>
+</body>
+
+</html>

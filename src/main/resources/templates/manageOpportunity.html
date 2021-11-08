@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script type="text/javascript" src="/js/um27xtxn.js"></script>
+<body>
+	<div align="left">
+		<i class="fa fa-arrow-circle-left" style="font-size: 36px"
+			onclick="history.go(-1)"></i>
+	</div>
+	<div class="header">
+		<header>
+			<h1 align="center">
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<h3 align="center">Opportunity Details</h3>
+	<form th:action="@{/updateOpportunity}" th:object="${opportunity}"
+		method="post">
+		<div align="center">
+			<table>
+				<tr style="display: none;">
+					<td></td>
+					<td><input th:field="*{oId}" type="text"></td>
+				</tr>
+				<tr>
+					<td><label> Name </label></td>
+					<td>:</td>
+					<td><input type="text" th:field="*{name}"></td>
+				</tr>
+				<tr>
+					<td><label> Win Percentage : </label></td>
+					<td>:</td>
+					<td><input type="text" th:field="*{winPercentage}"></td>
+				</tr>
+				<tr>
+					<td><label> Account : </label></td>
+					<td>:</td>
+					<td><input type="text" th:field="*{account}"></td>
+				</tr>
+				<!-- 	<tr  style="display: none;" >
+				<td><input type="text" th:name="primaryContactId"
+					th:field="*{oId}">
+				</td>
+			</tr>
+			<tr>
+				<td><label> Primary Contact : </label></td>
+				<td>:</td>
+				<td><input type="text" th:name="primaryContact"
+					id="primaryContact" th:value="${opportunity.primaryContact}">
+					<button class="search" onclick="showContacts()">
+						<i class="fa fa-search"></i>
+					</button></td>
+			</tr> -->
+				<tr>
+					<td><label> Close Date : </label></td>
+					<td>:</td>
+					<td><input type="date" th:field="*{closeDate}"></td>
+				</tr>
+				<tr>
+					<td><label> Estimated Revenue : </label></td>
+					<td>:</td>
+					<td><input type="text" th:field="*{estimatedRevenue}"></td>
+				</tr>
+				<tr>
+					<td><label> Risk Level : </label></td>
+					<td>:</td>
+					<td><select th:field="*{riskLevel}">
+							<option th:value="'HIGH'" th:text="HIGH"></option>
+							<option th:value="'MEDIUM'" th:text="MEDIUM"></option>
+							<option th:value="'LOW'" th:text="LOW"></option>
+					</select></td>
+				</tr>
+
+			</table>
+			<br> <br> <input type="submit" value="Update">
+		</div>
+	</form>
+
+</body>
+
+</html>

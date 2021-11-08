@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" th:src="@{/js/um27xtxn.js}"></script>
+</head>
+<body>
+	<div class="header">
+		<div align="right">
+			<a th:href="@{home}"> Home </a>
+		</div>
+		<header>
+			<h1>
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<h3 align="center">Opportunity Search</h3>
+	<br>
+	<br>
+	<br>
+	<br>
+	<form th:action="@{searchOportunityByNameAndAcount}"
+		th:object="${opportunity}" method="POST" >
+		<div align="center">
+			<label> Name : </label> <input th:field="*{name}" type="text">
+			<br> <br> <label> Account : </label> <input
+				th:field="*{account}" type="text" > <br> <br> <input
+				type="submit">
+		</div>
+
+	</form>
+
+	<!-- <div th:if="${ not#lists.isEmpty(opportunities)}">
+		<table border="1">
+			<tr>
+				<th>Title</th>
+				<th>Name</th>
+				<th>Account</th>
+				<th>Address</th>
+				<th>E-mail</th>
+				<th>Work Phone</th>
+				<th>Mobile Phone</th>
+
+			</tr>
+			<tr th:each="opportunity : ${opportunities}">
+				<td th:text="${opportunity.name}"></td>
+				<td th:text="${opportunity.winPercentage}"></td>
+				<td th:text="${opportunity.account}"></td>
+				<td th:text="${opportunity.primaryContact}"></td>
+				<td th:text="${opportunity.closeDate}"></td>
+				<td th:text="${opportunity.estimatedRevenue}"></td>
+				<td th:text="${opportunity.riskLevel}"></td>
+
+			</tr>
+		</table>
+
+	</div> -->
+
+
+</body>
+
+</html>

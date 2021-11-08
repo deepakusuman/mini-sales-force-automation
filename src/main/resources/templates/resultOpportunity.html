@@ -1,0 +1,57 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<script type="text/javascript" th:src="@{/js/um27xtxn.js}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="header">
+		<header>
+			<h1>
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<h3 align="center">Opportunity Search Result</h3>
+
+	<div th:if="${ not#lists.isEmpty(opportunities)}" align="center">
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Win Percentage</th>
+				<th>Account</th>
+				<th>Primary Contact</th>
+				<th>Close Date</th>
+				<th>Estimated Revenue</th>
+				<th>Risk Level</th>
+
+			</tr>
+			<tr th:each="opportunity : ${opportunities}">
+				<td th:text="${opportunity.name}"></td>
+				<td th:text="${opportunity.winPercentage}"></td>
+				<td th:text="${opportunity.account}"></td>
+				<td th:text="${opportunity.primaryContact}"></td>
+				<td th:text="${opportunity.closeDate}"></td>
+				<td th:text="${opportunity.estimatedRevenue}"></td>
+				<td th:text="${opportunity.riskLevel}"></td>
+
+			</tr>
+		</table>
+
+	</div>
+
+	<div th:unless="${ not#lists.isEmpty(opportunities)}" align="center">
+		<div > No Results Found</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script type="text/javascript">
+
+function validateForm(){
+	console.log(7);
+	
+	return false;
+}
+
+</script>
+<body>
+	<div align="left">
+		<i class="fa fa-arrow-circle-left" style="font-size: 36px"
+			onclick="history.go(-1)"></i>
+	</div>
+	<div class="header">
+		<header>
+			<h1 align="center">
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<h3 align="center">Add Contact	 Details</h3>
+	<form  th:action="@{addContact}" method="POST" th:object="${contact}">
+	<div align="center">
+
+		<table>
+
+			<tr>
+				<td><label> Name </label></td>
+				<td>:</td>
+				<td><input type="text" th:field="*{name}"></td>
+			</tr>
+			<tr>
+				<td><label> Title : </label></td>
+				<td>:</td>
+				<td><input type="text" th:field="*{title}"></td>
+			</tr>
+			<tr>
+				<td><label> Account : </label></td>
+				<td>:</td>
+				<td><input type="text" th:field="*{account}"></td>
+			</tr>
+			<tr>
+				<td><label> Address: </label></td>
+				<td>:</td>
+				<td><input type="text" th:field="*{address}"></td>
+			</tr>
+			<tr>
+				<td><label> Work Phone : </label></td>
+				<td>:</td>
+				<td><input type="text" th:field="*{workPhone}"></td>
+			</tr>
+			<tr>
+				<td><label> Mobile Phone : </label></td>
+				<td>:</td>
+				<td><input type="text" th:field="*{mobilePhone}"></td>
+			</tr>
+			<tr>
+				<td><label> Email : </label></td>
+				<td>:</td>
+				<td><input type="email" th:field="*{email}"></td>
+			</tr>
+			
+
+		</table>
+		<br> <br> <input type="submit" value="Add" >
+			
+	</div>
+</form>
+</body>
+
+</html>

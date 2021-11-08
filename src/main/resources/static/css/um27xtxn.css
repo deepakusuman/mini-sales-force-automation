@@ -1,0 +1,138 @@
+@charset "ISO-8859-1";
+/* Style the header */
+.header {
+  	background-color: #BFC9CA;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	width: 100%;
+}
+
+.spanEdge {
+	color: #27AE60;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.spantester {
+	color: #ECF0F1;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.add-opportunity {
+		background-color: #E6B2A7;
+}
+
+.get-opportunity {
+		background-color: #B68277;
+}
+
+.content {
+	background-color: white;
+	color: black;
+}
+
+.left-div {
+	display: inline-block;
+	/* width: 65%; */
+	position: relative;
+	left: 30px;
+}
+
+.desc {
+	
+}
+
+.input-format {
+	color: red;
+}
+
+.input-textarea {
+	overflow: scroll;
+}
+
+.output-textarea {
+	overflow: scroll;
+	color: black;
+}
+
+.right-div {
+	position: absolute;
+	left: 1050px;
+	top: 150px;
+	/* right: 750px; */
+}
+
+.drop-down-div {
+	background-color: #99A3A4;
+	position: relative;
+	left: 30px;
+	right: 30px;
+	width: 300px;
+}
+
+.drop-down-inner-div {
+	position: relative;
+	left: 50px;
+}
+
+.env-span {
+	color: red;
+}
+
+.type-span {
+	color: red;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.col-2 {
+	position: absolute;
+	right: 0px;
+	width: 300px;
+	border: 3px solid #73AD21;
+	padding: 10px;
+}

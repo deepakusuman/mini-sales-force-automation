@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" name="viewport"
+	content="width=device-width, initial-scale=1">
+<title>Sales Force Automation</title>
+<link th:href="@{/css/um27xtxn.css}" rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script type="text/javascript">
+	
+</script>
+<body>
+	<div align="left">
+		<i class="fa fa-arrow-circle-left" style="font-size: 36px"
+			onclick="history.go(-1)"></i>
+	</div>
+	<div class="header">
+		<header>
+			<h1 align="center">
+				<span class="spanEdge">Sales Force </span> <span class="spantester">
+					Automation </span>
+
+			</h1>
+		</header>
+	</div>
+
+	<h3 align="center">Contact List</h3>
+	<form th:action="@{addMultipleContacts}">
+		<div>
+			<table border="1">
+				<tr>
+					<th>Title</th>
+					<th>Name</th>
+					<th>Account</th>
+					<th>Address</th>
+					<th>E-mail</th>
+					<th>Work Phone</th>
+					<th>Mobile Phone</th>
+					<th></th>
+					<th style="display: none;" th:text="${oId}" id="oId" th:name="oId" th:value="${oId}"></th>
+
+				</tr>
+				<tr th:each="contact : ${contacts}">
+					<td style="display: none;" th:text="${contact.cId}" id="cId" th:name="cId"></td>
+					<td style="display: none;" th:text="${oId}" id="oId" th:name="oId" ></td>
+					<td th:text="${contact.title}"></td>
+					<td th:text="${contact.name}" id="cName"></td>
+					<td th:text="${contact.account}"></td>
+					<td th:text="${contact.address}"></td>
+					<td th:text="${contact.email}"></td>
+					<td th:text="${contact.workPhone}"></td>
+					<td th:text="${contact.mobilePhone}"></td>
+					<td><input type="checkbox" th:value="${contact.cId}" th:name="cId"  ></td>
+
+				</tr>
+			</table>
+
+		</div>
+		<br><br><br><br>
+		<div align="center">
+			<input type="submit" value="Add">
+		</div>
+	</form>
+</body>
+
+</html>

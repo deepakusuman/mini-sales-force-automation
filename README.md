@@ -1,4 +1,4 @@
-# mini-sales-force-automation
+# Mini-Sales-Force-Automation
 
 A Software product and services company decided to invest in developing a Sales Force Automation solution that can be offered as an application to different corporate customers. The registration of corporate customers will be done via a separate system and it is not part of the scope of this project. The high level requirements of the Sales Force Automation solution are given below:
 
